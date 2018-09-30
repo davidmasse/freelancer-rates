@@ -6,7 +6,7 @@ Upwork.com allows freelance workers to connect with potential employers.  Here I
 
 ### Research Question and Use Case
 
-One basic question faced by Upwork freelancers is how much to charge per hour of work. As a guide, I wanted try to make a model to predict a freelancer's hourly rate, given the other details of their profile listed above (except the total earnings, which are function of the target variable).  Another goal of this model would be to examine the freelance labor market overall and show what skills are or are not in high demand/short supply.
+One basic question faced by Upwork freelancers is how much to charge per hour of work. As a guide, I wanted try to make a model to predict a freelancer's hourly rate, given the other details of their profile listed above (except the total earnings, which are function of the target variable).  Another goal of this model would be to examine the freelance labor market overall and show what skills are or are not in high demand/short supply (also useful to freelancers in filling out their profiles).
 
 A second question faced by Upwork freelancers is what it takes to get hired for assignments.  To the extent that a freelancer controls the contents of their profile, what should they prioritize changing?  Upwork also has an economic interest in the question, i.e. in predicting which freelancers will reliably take on an complete work through the site.  The target variable for this question is hours worked/jobs done/earnings, but in a categorical sense: did this freelancer ever actually get hired, do work and get paid, or not?  For this question the stated hourly rate can serve as an input feature for the model.
 
@@ -47,7 +47,7 @@ Using clusters as (categorical, dummified) features reduced dimensionality drast
 
 ### Regression
 
-In order to predict a freelancer's hourly rate, I first turned to a simple arithmetic procedure: for any new observation, I assigned it to a training cluster (closest centroid by Hamming distance) and then predicted a value for its rate equal to the mean rate within the training cluster.  This performed better than a null model guessing the overall training mean rate for any new observation, but root mean squared error (RMSE) was close to the original standard deviation while R2 was a positive value but less than 0.1.  
+In order to predict a freelancer's hourly rate, I first turned to a simple arithmetic procedure: for any new observation, I assigned it to a training cluster (closest centroid by Hamming distance) and then predicted a value for its rate equal to the mean rate within the training cluster.  This performed better than a null model (guessing the overall training mean rate for any new observation), but root mean squared error (RMSE) was close to the original standard deviation while R2 was a positive value but less than 0.1.  
 
 After that I used a Ridge linear regression as initial non-Ridge linear regression overfit to the training data and gave very large, variable coefficients.  Since the skills data was non-linear, and the distributions of other variables were clearly not Gaussian, I then turned to decision trees, with random forests performing better than linear regression.  The regressions with tree boosting methods (adaboost) produced discouraging negative R-squared.  K-nearest-neighbors produced similar results to the linear models.
 
