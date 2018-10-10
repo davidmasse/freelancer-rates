@@ -3,6 +3,8 @@
 
 ### Data Source
 
+![upwork_landing](/img/upwork_landing.png)
+
 Upwork.com allows freelance workers to connect with potential employers.  Here I focus on the freelancer side of the business, but jobs available on Upwork (and a database relating them to freelancers and employers) could be an area for future study.  On the site, Upwork freelancers can propose an hourly wage/rate, list their skills, write a headline and a description of their abilities (up to several paragraphs), post a photo of themselves, list education and work experience, and display results of Upwork-supplied proficiency tests in a variety of subjects.  For the benefit of potential employers, Upwork populates profiles with tallies of hours worked, jobs done and total earnings; information on each freelancer's country, state and town; and employer ratings and reviews of past job performance.  I stuck to US freelancers, but variations related to freelancer country could be an area for future study.
 
 
