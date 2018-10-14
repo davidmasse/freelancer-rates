@@ -17,6 +17,7 @@ For the benefit of potential employers, Upwork populates profiles with
 * tallies of hours worked, jobs done and total earnings
 * information on each freelancer's country, state and town
 * employer ratings and reviews of past job performance
+
 I stuck to US freelancers for comparability, but variations related to freelancer country could be an area for future study.
 
 
