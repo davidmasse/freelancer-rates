@@ -12,6 +12,7 @@ Upwork.com allows freelance workers to connect with potential employers.  I focu
 * post a photo of themselves
 * list education and work experience
 * display results of Upwork-supplied proficiency tests in a variety of subjects
+
 For the benefit of potential employers, Upwork populates profiles with
 * tallies of hours worked, jobs done and total earnings
 * information on each freelancer's country, state and town
